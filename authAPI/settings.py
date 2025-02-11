@@ -147,6 +147,8 @@ EMAIL_HOST_PASSWORD = "" # Your outlook email password
 EMAIL_USE_TLS = False
 
 REST_FRAMEWORK = {
+
+
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
@@ -154,7 +156,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-SIMPLE_JWT = {
+SIMPLE_JWT =
     "AUTH_HEADER_TYPES": ("Bearer",),
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
